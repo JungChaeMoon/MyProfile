@@ -17,7 +17,7 @@ def detail(request):
 
     comment_list = Comment.objects.all().order_by('-pub_date')[:5]
 
-    return render(request, "mainapp/detail.html",{'comment_list': comment_list})
+    return render(request, "mainapp/detail.html", {'comment_list': comment_list})
 
 
 def redirect(request):
