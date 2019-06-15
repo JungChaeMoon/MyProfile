@@ -8,5 +8,5 @@ urlpatterns = [
     path('chaemoon/', views.index, name='index'),
     path('video', views.video, name='video'),
     path('comment/', views.detail, name='detail'),
-    path('redirect/',views.redirect, name='redirect'),
+    path('redirect/', views.redirect, name='redirect'),
 ]

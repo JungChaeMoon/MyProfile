@@ -15,7 +15,10 @@ def video(request):
 
 def detail(request):
 
-    return render(request, "mainapp/detail.html")
+    comment_list = Comment.objects.all().order_by('-pub_date')[:5]
+
+    return render(request, "mainapp/detail.html",{'comment_list':comment_list})
+
 
 def redirect(request):
 
@@ -26,7 +29,4 @@ def redirect(request):
     comment.pub_date = timezone.now()
     comment.save()
 
-    comment_list = Comment.objects.all().order_by('-pub_date')[:5]
-
-    return render(request, 'mainapp/detail.html', {'comment_list':comment_list})
-
+    return HttpResponseRedirect(reverse('mainapp:detail'))
