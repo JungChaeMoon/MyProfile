@@ -8,4 +8,16 @@
 
 <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
 
-<h1><a href="{% url 'mainapp:detail' %}"><font color="#f5f5dc">다음</font></a></h1>
+<div style="float:left; margin-left: 200px; margin-top: 150px;">
+    <video width="1000" height="600" controls loop>
+        <source src="{% static 'mainapp/img/future.mp4' %}" type="video/mp4">
+
+    </video>
+    </div>
+</div>
+<div style="float : right; margin-top:300px; margin-right:200px;">
+
+<h1 style="font-family: 'Nanum Brush Script', cursive; font-size: 50px;" ><a href="{% url 'mainapp:detail' %}"><font color="#f5f5dc">더보고싶다면 여기클릭!</font></a></h1>
+
+</div>
+<h1 style="font-family: 'Nanum Brush Script', cursive; font-size: 25px; float: left;"><font color="#f5f5dc"> ↙ 영상 클릭!</font></h1>
